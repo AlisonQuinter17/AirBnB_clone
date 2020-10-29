@@ -3,6 +3,7 @@
 from uuid import uuid4
 from datetime import datetime, timedelta
 
+
 class BaseModel:
 
     def __init__(self):
@@ -14,6 +15,7 @@ class BaseModel:
         return "[{}] ({}) {}".format(self.__class__.__name__,
                                      self.id,
                                      self.__dict__)
+
     def save(self):
         self.updated_at = datetime.now()
 
