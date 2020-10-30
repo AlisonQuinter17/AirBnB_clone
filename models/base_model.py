@@ -2,7 +2,6 @@
 """Module for BaseModel class."""
 import uuid
 from datetime import datetime
-frmt = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 class BaseModel():
@@ -18,12 +17,13 @@ class BaseModel():
           - setattr(): sets the value of the attribute of an object.
         """
 
-        if kwargs is not None:
+        if kwargs:
             for k, v in kwargs.items():
                 if k == '__class__':
                     pass
                 elif k == 'created_at' or k == 'updated_at':
-                    setattr(self, k, datetime.strptime(v, frmt))
+                    setattr(self, k, datetime.
+                            strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
                 else:
                     setattr(self, k, v)
         else:
@@ -53,6 +53,6 @@ class BaseModel():
         """
         dictionary = self.__dict__.copy()
         dictionary.update({'__class__': self.__class__.__name__})
-        dictionary.update({'created_at': self.created_at.strftime("frmt")})
-        dictionary.update({'updated_at': self.updated_at.strftime("frmt")})
+        dictionary.update({'created_at': self.created_at.isoformat()})
+        dictionary.update({'updated_at': self.updated_at.isoformat()})
         return dictionary
