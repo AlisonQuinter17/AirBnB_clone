@@ -21,6 +21,8 @@ class FileStorage:
         """
         Serializes(convert a object to string) the dictionary:
         '__objects' to the JSON file: '__file_path'.
+
+        - When data is SENT it is serialized.
         """
         with open(self.__file_path, "w", encoding="utf-8") as f:
             json.dump({key: value.to_dict() for key, value in
@@ -31,6 +33,8 @@ class FileStorage:
         Deserializes(convert a string to an object) the JSON file:
         '__file_path' to a dictionary: '__objects', in case the JSON
         file doesn't exist, it does nothing.
+
+        - When data is RECEIVED it's deserialized.
         """
         from models.base_model import BaseModel
 
