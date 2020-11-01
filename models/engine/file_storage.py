@@ -14,7 +14,7 @@ class FileStorage:
 
     def new(self, obj):
         """Sets in __objects the obj with key <obj class name>.id"""
-        key = "{}.{}".format(type(obj).__name__, obj.id)
+        key = "{}.{}".format(type(obj).__name__, str(obj.id))
         self.__objects[key] = obj
 
     def save(self):
@@ -32,6 +32,8 @@ class FileStorage:
         '__file_path' to a dictionary: '__objects', in case the JSON
         file doesn't exist, it does nothing.
         """
+        from models.base_model import BaseModel
+
         try:
             with open(self.__file_path, "r", encoding="utf-8") as f:
                 the_dict = json.loads(f.read())
