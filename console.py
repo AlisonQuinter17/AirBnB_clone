@@ -26,6 +26,10 @@ class HBNBCommand(cmd.Cmd):
         """
         Creates a new instance of BaseModel, saves it
         (to the JSON file) and prints the id.
+
+        -  With 'split' tokenize the line to be able to verify
+            the existence exclusively of the module (args[0])
+            and ignore other arguments if there are any.
         """
         if line:
             args = line.split()
