@@ -137,7 +137,8 @@ class HBNBCommand(cmd.Cmd):
                 return
 
             objs = FileStorage().all()
-            if (args[0] + "." + args[1]) in objs:
+            instance = args[0] + "." + args[1]
+            if instance in objs:
 
                 if len(args) < 3:
                     print("** attribute name missing **")
@@ -153,7 +154,7 @@ class HBNBCommand(cmd.Cmd):
                     value = modification
 
                     setattr(the_object, attribute, value)
-                    objs[args[0] + "." + args[1]].save()
+                    objs[instance].save()
             else:
                 print("** no instance found **")
         else:
