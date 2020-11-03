@@ -52,6 +52,7 @@ class HBNBCommand(cmd.Cmd):
         """
         if line:
             args = line.split(' ')
+
             if args[0] not in self.allowed_modules:
                 print("** class doesn't exist **")
                 return
@@ -67,6 +68,55 @@ class HBNBCommand(cmd.Cmd):
             print(objs[args[0] + "." + args[1]])
         else:
             print("** no instance found **")
+
+    def do_destroy(self, line):
+        """
+        Deletes an instance based on the class name
+        and id (save the change into the JSON file).
+        """
+        if line:
+            args = line.split(' ')
+
+            if args[0] not in self.allowed_modules:
+                print("** class doesn't exist **")
+                return
+            if len(args) < 2:
+                print("** instance id missing **")
+                return
+        else:
+            print("** class name missing **")
+            return
+
+        objs = FileStorage().all()
+        if args[0]+"."+args[1] in objs:
+            del(objs[args[0] + "." + args[1]])
+            FileStorage().save()
+        else:
+            print("** no instance found **")
+
+    def do_all(self, line):
+        """Prints all string representation of all
+        instances based or not on the class name."""
+        objs = FileStorage().all()
+
+        if line:
+            args = line.split(' ')
+
+            if args[0] not in self.allowed_modules:
+                print("** class doesn't exist **")
+                return
+
+            fill_list1 = []
+            for k, v in objs.items():
+                if args[0] in k:
+                    fill_list1.append(str(v))
+            print(fill_list1)
+
+        else:
+            fill_list2 = []
+            for v in objs.values():
+                fill_list2.append(str(v))
+            print(fill_list2)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
