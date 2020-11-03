@@ -95,8 +95,10 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_all(self, line):
-        """Prints all string representation of all
-        instances based or not on the class name."""
+        """
+        Prints all string representation of all
+        instances based or not on the class name.
+        """
         objs = FileStorage().all()
 
         if line:
@@ -117,6 +119,46 @@ class HBNBCommand(cmd.Cmd):
             for v in objs.values():
                 fill_list2.append(str(v))
             print(fill_list2)
+
+    def do_update(self, line):
+        """
+        Updates an instance based on the class
+        name and id by adding or updating attribute
+        (save the change into the JSON file).
+        """
+        if line:
+            args = line.split(' ')
+
+            if args[0] not in self.allowed_modules:
+                print("** class doesn't exist **")
+                return
+            if len(args) < 2:
+                print("** instance id missing **")
+                return
+
+            objs = FileStorage().all()
+            if (args[0] + "." + args[1]) in objs:
+
+                if len(args) < 3:
+                    print("** attribute name missing **")
+                    return
+                if len(args) < 4:
+                    print("** value missing **")
+                    return
+
+                if '"' in args[3]:
+                    modification = args[3].replace('"', '')
+                    the_object = objs[args[0] + "." + args[1]]
+                    attribute = args[2]
+                    value = modification
+
+                    setattr(the_object, attribute, value)
+                    objs[args[0] + "." + args[1]].save()
+            else:
+                print("** no instance found **")
+        else:
+            print('** class name missing **')
+            return
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
