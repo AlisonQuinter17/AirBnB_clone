@@ -3,12 +3,13 @@
 import cmd
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter."""
     prompt = "(hbnb) "
-    allowed_modules = ["BaseModel"]
+    allowed_modules = ["BaseModel", "User"]
 
     def do_quit(self, line):
         """Quit command to exit the program"""
