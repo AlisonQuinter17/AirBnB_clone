@@ -2,6 +2,7 @@
 """Module for HBNBCommand class."""
 import cmd
 from models.base_model import BaseModel
+from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -32,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
             and ignore other arguments if there are any.
         """
         if line:
-            args = line.split()
+            args = line.split(' ')
 
             if args[0] not in self.allowed_modules:
                 print("** class doesn't exist **")
@@ -43,6 +44,29 @@ class HBNBCommand(cmd.Cmd):
                     print(instance.id)
         else:
             print("** class name missing **")
+
+    def do_show(self, line):
+        """
+        Prints the string representation of an instance
+        based on the class name and id.
+        """
+        if line:
+            args = line.split(' ')
+            if args[0] not in self.allowed_modules:
+                print("** class doesn't exist **")
+                return
+            if len(args) < 2:
+                print("** instance id missing **")
+                return
+        else:
+            print("** class name missing **")
+            return
+
+        objs = FileStorage().all()
+        if args[0]+"."+args[1] in objs:
+            print(objs[args[0] + "." + args[1]])
+        else:
+            print("** no instance found **")
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
