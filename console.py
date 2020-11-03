@@ -41,8 +41,10 @@ class HBNBCommand(cmd.Cmd):
             else:
                 if args[0] == self.allowed_modules[0]:
                     instance = BaseModel()
-                    instance.save()
-                    print(instance.id)
+                elif args[0] == self.allowed_modules[1]:
+                    instance = User()
+                instance.save()
+                print(instance.id)
         else:
             print("** class name missing **")
 
