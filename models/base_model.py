@@ -1,39 +1,61 @@
-#!/usr/bin/python3
-""" defines all common attributes/methods for other classes """
-from datetime import datetime as dt
-from uuid import uuid4
+#!/usr/bin/env python3
+"""Module for BaseModel class."""
+import uuid
+from datetime import datetime
+from models import storage
 
 
-class BaseModel:
-    """ base model """
+class BaseModel():
+    """BaseModel class."""
     def __init__(self, *args, **kwargs):
-        if len(kwargs) > 0:
-            for key, value in kwargs.items():
-                if key in ['updated_at', 'created_at']:
-                    fromisoformat = dt.strptime(
-                        value, '%Y-%m-%dT%H:%M:%S.%f')
-                    setattr(self, key, fromisoformat)
-                elif key != "__class__":
-                    setattr(self, key, value)
+        """
+        Arguments
+          - *args: is a Tuple that contains all arguments (won’t be used).
+          - **kwargs: is a dictionary that contains all arguments by key/value.
+
+        Functions/methods:
+          - strptime(): creates a datetime object from the given string.
+          - setattr(): sets the value of the attribute of an object.
+        """
+
+        if kwargs:
+            for k, v in kwargs.items():
+                if k == '__class__':
+                    pass
+                elif k == 'created_at' or k == 'updated_at':
+                    setattr(self, k, datetime.
+                            strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
+                else:
+                    setattr(self, k, v)
         else:
-            self.id = str(uuid4())
-            self.created_at = dt.now()
-            self.updated_at = dt.now()
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+            storage.new(self)
 
     def __str__(self):
-        """ print """
-        return "[{}] ({}) {}".format(self.__class__.__name__,
-                                     self.id,
-                                     self.__dict__)
+        """
+        Used to find the human readable or "informal" string
+        representation of an object.
+        """
+        return "[{}] ({}) {}"\
+            .format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
-        """ update """
-        self.updated_at = dt.now()
+        """
+        Updates the public instance attribute updated_at with
+        the current datetime.
+        """
+        self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
-        """ dict """
-        model = self.__dict__.copy()
-        model["__class__"] = self.__class__.__name__
-        model["created_at"] = self.created_at.strftime("%Y-%m-%dT%H:%M:%S.%f")
-        model["updated_at"] = self.created_at.isoformat()
-        return model
+        """
+        Returns a dictionary containing all keys/values of __dict__
+        of the instance.
+        """
+        dictionary = self.__dict__.copy()
+        dictionary.update({'__class__': self.__class__.__name__})
+        dictionary.update({'created_at': self.created_at.isoformat()})
+        dictionary.update({'updated_at': self.updated_at.isoformat()})
+        return dictionary
