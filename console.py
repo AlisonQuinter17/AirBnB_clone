@@ -8,13 +8,13 @@ from models.state import State
 from models.city import City
 from models.amenity import Amenity
 from models.place import Place
-from models.review impor Review
+from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter."""
     prompt = "(hbnb) "
-    allowed_modules = ["BaseModel", "User"]
+    allowed_modules = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
 
     def do_quit(self, line):
         """Quit command to exit the program"""
@@ -48,6 +48,16 @@ class HBNBCommand(cmd.Cmd):
                     instance = BaseModel()
                 elif args[0] == self.allowed_modules[1]:
                     instance = User()
+                elif args[0] == self.allowed_modules[2]:
+                    instance = State()
+                elif args[0] == self.allowed_modules[3]:
+                    instance = City()
+                elif args[0] == self.allowed_modules[4]:
+                    instance = Amenity()
+                elif args[0] == self.allowed_modules[5]:
+                    instance = Place()
+                elif args[0] == self.allowed_modules[6]:
+                    instance = Review()
                 instance.save()
                 print(instance.id)
         else:
