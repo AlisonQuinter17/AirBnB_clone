@@ -180,5 +180,42 @@ class HBNBCommand(cmd.Cmd):
             print('** class name missing **')
             return
 
+    def default(self, line):
+        """
+        Retrieve all instances of a class by using: <class name>.all().
+        """
+        args = line.split('.')
+
+        if len(args) >= 2:
+            if args[1][:3] == "all":
+                self.do_all(args[0])
+            if args[1][:5] == "count":
+                self.do_count(args[0])
+        else:
+            cmd.Cmd.default(self, args)
+
+    def do_count(self, line):
+        """
+        Retrieve the number of instances of a class: <class name>.count().
+        """
+        if line:
+            objs = FileStorage().all()
+            args = line.split(' ')
+
+            if args[0] not in self.allowed_modules:
+                print("** class doesn't exist **")
+                return
+            elif not args[0]:
+                print("** class name missing **")
+                return
+            else:
+                container = []
+                for k in objs:
+                    if k.startswith(args[0]):
+                        container += [k]
+                print(len(container))
+        else:
+            print('** class name missing **')
+
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
