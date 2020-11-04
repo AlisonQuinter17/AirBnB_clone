@@ -17,7 +17,7 @@ This first step is very important because it will help us develop the next steps
 
 | Command  |  Description  | Use |
 | ----- | ----- | ----- |
-| create |Create an instance (object) and print its id.| **(hbnb)** create <class> |
+| create |Create an instance (object) and print its id.| **(hbnb)** create `<class>` |
 | show |Prints the string representation of an instance based on the class name and id.| **(hbnb)** show `<class>` `<id>` |
 | destroy | Deletes an instance based on the class name and id | **(hbnb)** destroy `<class>` `<id>` |
 | all | Prints all string representation of all instances based or not on the class name. |**(hbnb)** all `<class>` *or*  **(hbnb)** all|
