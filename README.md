@@ -24,7 +24,7 @@ This first step is very important because it will help us develop the next steps
 | update | Updates an instance based on the class name and id by adding or updating attribute. | **(hbnb)** update `<class>` `<id>` `<attribute name>` `"<attribute value>"` |
 | count | Prints the total number of instances of a class. | **(hbnb)** `<class name>`.count() |
 | quit / EOF | Exit the program. | **(hbnb)** quit *or* **(hbnb)** EOF |
-| help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb) **help |
+| help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb)** help |
 
 
 ## Environment
