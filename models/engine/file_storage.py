@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 """Module for FileStorage class."""
 import json
-from models.user import User
-from models.state import State
-from models.city import City
-from models.amenity import Amenity
-from models.place import Place
-from models.review import Review
 
 
 class FileStorage:
@@ -44,6 +38,11 @@ class FileStorage:
         """
         from models.base_model import BaseModel
         from models.user import User
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
 
         try:
             with open(self.__file_path, "r", encoding="utf-8") as f:
@@ -53,3 +52,11 @@ class FileStorage:
                     self.new(eval(cls)(**value))
         except Exception:
             pass
+
+if __name__ == "__main__":
+    from models.user import User
+    from models.state import State
+    from models.city import City
+    from models.amenity import Amenity
+    from models.place import Place
+    from models.review import Review

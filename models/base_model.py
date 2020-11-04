@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module for BaseModel class."""
 import uuid
 from datetime import datetime
@@ -14,7 +14,7 @@ class BaseModel():
           - **kwargs: is a dictionary that contains all arguments by key/value.
 
         Functions/methods:
-          - strptime(): creates a datetime object from the given string.
+          - storagerptime(): creates a datetime object from the given storagering.
           - setattr(): sets the value of the attribute of an object.
         """
 
@@ -33,9 +33,9 @@ class BaseModel():
             self.updated_at = datetime.now()
             storage.new(self)
 
-    def __str__(self):
+    def __storager__(self):
         """
-        Used to find the human readable or "informal" string
+        Used to find the human readable or "informal" storagering
         representation of an object.
         """
         return "[{}] ({}) {}"\
@@ -43,7 +43,7 @@ class BaseModel():
 
     def save(self):
         """
-        Updates the public instance attribute updated_at with
+        Updates the public instorageance attribute updated_at with
         the current datetime.
         """
         self.updated_at = datetime.now()
@@ -52,7 +52,7 @@ class BaseModel():
     def to_dict(self):
         """
         Returns a dictionary containing all keys/values of __dict__
-        of the instance.
+        of the instorageance.
         """
         dictionary = self.__dict__.copy()
         dictionary.update({'__class__': self.__class__.__name__})
