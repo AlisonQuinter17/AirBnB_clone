@@ -189,8 +189,23 @@ class HBNBCommand(cmd.Cmd):
         if len(args) >= 2:
             if args[1][:3] == "all":
                 self.do_all(args[0])
+
             if args[1][:5] == "count":
                 self.do_count(args[0])
+
+            if args[1][:4] == "show":
+                token = args[1].split('(')
+                if len(token) >= 2:
+                    self.do_show(args[0] + ' ' + token[1][1:-2])
+                else:
+                    print("** no instance found **")
+
+            if args[1][:7] == "destroy":
+                token = args[1].split('(')
+                if len(token) >= 2:
+                    self.do_destroy(args[0] + ' ' + token[1][1:-2])
+                else:
+                    print("** no instance found **")
         else:
             cmd.Cmd.default(self, args)
 
