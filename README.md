@@ -15,6 +15,9 @@ This first step is very important because it will help us develop the next steps
 (hbnb)
 ```
 
+<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
+
+
 | Command  |  Description  | Use |
 | ----- | ----- | ----- |
 | create |Create an instance (object) and print its id.| **(hbnb)** create `<class>` |
