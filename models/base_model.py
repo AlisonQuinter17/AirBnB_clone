@@ -33,7 +33,7 @@ class BaseModel():
             self.updated_at = datetime.now()
             storage.new(self)
 
-    def __storager__(self):
+    def __str__(self):
         """
         Used to find the human readable or "informal" storagering
         representation of an object.
