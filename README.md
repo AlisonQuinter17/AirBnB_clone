@@ -20,6 +20,7 @@ $ ./console.py
 $ echo "help" | ./console.py
 (hbnb)
 ```
+## Example
 
 <img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
 
@@ -35,6 +36,11 @@ $ echo "help" | ./console.py
 | quit / EOF | Exit the program. | **(hbnb)** quit *or* **(hbnb)** EOF |
 | help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb)** help |
 
+## Tests
+- The code of this project is tested with the **unittest** module, to run it type:
+```python
+$ python3 -m unittest discover tests
+```
 
 ## Environment
 * Language: Python3
