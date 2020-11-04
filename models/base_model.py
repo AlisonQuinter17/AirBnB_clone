@@ -14,7 +14,7 @@ class BaseModel():
           - **kwargs: is a dictionary that contains all arguments by key/value.
 
         Functions/methods:
-          - storagerptime(): creates a datetime object from the given storagering.
+          - strptime(): creates a datetime object from the given instance.
           - setattr(): sets the value of the attribute of an object.
         """
 
