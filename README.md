@@ -9,9 +9,15 @@ This first step is very important because it will help us develop the next steps
 **This project is part of the Holberton School Full-Stack Software Engineer program.**
 
 ## Usage
-- To run the console you must run the console.py file:
+- You can run the console mode:
+### Interactive
 ```python
-./console.py
+$ ./console.py
+(hbnb)
+```
+### Non-Interactive
+```python
+$ echo "help" | ./console.py
 (hbnb)
 ```
 
