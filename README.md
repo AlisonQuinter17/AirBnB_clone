@@ -26,6 +26,7 @@ This first step is very important because it will help us develop the next steps
 | quit / EOF | Exit the program. | **(hbnb)** quit *or* **(hbnb)** EOF |
 | help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb) **help |
 
+
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
