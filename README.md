@@ -47,8 +47,9 @@ $ python3 -m unittest discover tests
 | console.py | Contains the entry point of the command interpreter `./console.py`|
 | base_model.py | Defines all common attributes/methods ; contains BaseModel class, constructor and methods |
 | `__init__.py` | File to convert directories into python modules, one of them contains reload method from FileStorage class |
-| file_storage.py | serializes/deserializes into JSON/PYTHON format; contains FileStorage class and methods |
-
+| file_storage.py | Serializes/deserializes into JSON/PYTHON format; contains FileStorage class and methods |
+| user.py | Inherits from BaseModel - contains class attributes like email, password, first_name and last_name |
+|  |  |
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
