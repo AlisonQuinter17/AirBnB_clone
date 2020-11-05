@@ -68,6 +68,7 @@ $ python3 -m unittest discover tests
 | all() | returns a dictionary `__objects` |
 | new() | sets the argument given as a value in the dictionary |
 
+
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
