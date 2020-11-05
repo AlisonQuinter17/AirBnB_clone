@@ -71,6 +71,7 @@ $ python3 -m unittest discover tests
 | reload() | deserializes from json to string and store it in file.json using save |
 
 <img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/logos.png" class="responsive"/>
+
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
