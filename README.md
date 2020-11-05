@@ -38,10 +38,9 @@ $ echo "help" | ./console.py
 ```python
 $ python3 -m unittest discover tests
 ```
-## What is inside
-| File | Description |
+## Content
+| Filename | Description |
 | ---- | ---- |
-| README.md | Description of the proyect and command interpreter |
 | AUTHORS | List all individuals having contributed content to the repository. Docker's format reference |
 | LICENSE | MIT LICENSE AND COPYTIGHT NOTICE |
 | console.py | Contains the entry point of the command interpreter `./console.py`|
@@ -54,36 +53,24 @@ $ python3 -m unittest discover tests
 | amenity.py | Inherits from BaseModel - contains class attributes like state_id and name |
 | place.py | Inherits from BaseModel - contains class attributes like city_id, user_id, name, description, number_rooms, number_bathrooms, max_guest, price_by_night, latitude, longitude and amenity_ids |
 | review.py | Inherits from BaseModel - contains class attributes like place_id, user_id and text |
+| README.md | Description of the proyect and command interpreter |
 
 ## BaseModel Methods
-| class | methods |
+| Class | Methods |
 | ---- | ---- |
 | `__str__()` | returns string format of the object, with class.name id and dict |
 | save() | updates instance attribute updated_at and save string into file.json |
 | to_dict() | returns a dictionary with isoformat, class name and all keys/values |
 
 ## FileStorage Methods
-| class | methods |
+| Class | Methods |
 | ---- | ---- |
 | all() | returns a dictionary `__objects` |
 | new() | sets the argument given as a value in the dictionary |
 | save() | serializes from string to json and store it in file.json |
 | reload() | deserializes from json to string and store it in file.json using save |
 
-![](https://innocreate.com/wp-content/uploads/2017/07/jsonlogo-550x550.png)
-![](https://i.pinimg.com/originals/0f/60/19/0f6019e15f1d8ae07e7e8ea16d242676.png)
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png)
-![](https://miro.medium.com/max/719/1*WaaXnUvhvrswhBJSw4YTuQ.png)
-
-
-> {JSON} Storage Engine.
-
-> Python Programming Language.
-
-> GIT control version.
-
-> Github Repository
-
+<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/logos.pdf" class="responsive"/>
 
 ## Environment
 * Language: Python3
