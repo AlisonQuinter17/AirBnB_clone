@@ -44,7 +44,10 @@ $ python3 -m unittest discover tests
 | README.md | Description of the proyect and command interpreter |
 | AUTHORS | List all individuals having contributed content to the repository. Docker's format reference |
 | LICENSE | MIT LICENSE AND COPYTIGHT NOTICE |
-| console.py | contains the entry point of the command interpreter `./console.py`|
+| console.py | Contains the entry point of the command interpreter `./console.py`|
+| base_model.py | Defines all common attributes/methods ; contains BaseModel class, constructor and methods |
+| __init__.py | File to convert directories into python modules, one of them contains reload method from FileStorage class |
+|  |  |
 
 ## Environment
 * Language: Python3
