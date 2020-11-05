@@ -46,8 +46,8 @@ $ python3 -m unittest discover tests
 | LICENSE | MIT LICENSE AND COPYTIGHT NOTICE |
 | console.py | Contains the entry point of the command interpreter `./console.py`|
 | base_model.py | Defines all common attributes/methods ; contains BaseModel class, constructor and methods |
-| __init__.py | File to convert directories into python modules, one of them contains reload method from FileStorage class |
-|  |  |
+| `__init__.py` | File to convert directories into python modules, one of them contains reload method from FileStorage class |
+| file_storage.py | serializes/deserializes into JSON/PYTHON format; contains FileStorage class and methods |
 
 ## Environment
 * Language: Python3
