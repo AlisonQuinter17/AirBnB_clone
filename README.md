@@ -59,6 +59,7 @@ $ python3 -m unittest discover tests
 | class | methods |
 | ---- | ---- |
 | `__str__` | returns string format of the object, with class.name id and dict |
+
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
