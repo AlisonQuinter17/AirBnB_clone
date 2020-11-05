@@ -58,7 +58,9 @@ $ python3 -m unittest discover tests
 ## What is inside
 | class | methods |
 | ---- | ---- |
-| `__str__` | returns string format of the object, with class.name id and dict |
+| `__str__()` | returns string format of the object, with class.name id and dict |
+| save() | updates instance attribute updated_at and save string into file.json |
+| to_dict() | returns a dictionary with isoformat, class name and all keys/values |
 
 ## Environment
 * Language: Python3
