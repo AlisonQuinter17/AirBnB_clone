@@ -67,6 +67,8 @@ $ python3 -m unittest discover tests
 | ---- | ---- |
 | all() | returns a dictionary `__objects` |
 | new() | sets the argument given as a value in the dictionary |
+| save() | serializes from string to json and store it in file.json |
+
 
 
 ## Environment
