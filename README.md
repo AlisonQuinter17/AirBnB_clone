@@ -43,6 +43,7 @@ $ python3 -m unittest discover tests
 | ---- | ---- |
 | README.md | Description of the proyect and command interpreter |
 | AUTHORS | List all individuals having contributed content to the repository. Docker's format reference |
+| LICENSE | MIT LICENSE AND COPYTIGHT NOTICE |
 
 ## Environment
 * Language: Python3
