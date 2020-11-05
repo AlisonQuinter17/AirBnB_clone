@@ -18,8 +18,6 @@ $ ./console.py
 $ echo "help" | ./console.py
 (hbnb)
 ```
-## Example
-<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
 
 ## Usage
 | Command  |  Description  | Use |
@@ -32,6 +30,9 @@ $ echo "help" | ./console.py
 | count | Prints the total number of instances of a class. | **(hbnb)** `<class name>`.count() |
 | quit / EOF | Exit the program. | **(hbnb)** quit *or* **(hbnb)** EOF |
 | help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb)** help |
+
+## Example
+<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
 
 ## Content
 | Filename | Description |
