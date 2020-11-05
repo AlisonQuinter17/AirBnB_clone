@@ -62,6 +62,10 @@ $ python3 -m unittest discover tests
 | save() | updates instance attribute updated_at and save string into file.json |
 | to_dict() | returns a dictionary with isoformat, class name and all keys/values |
 
+## FileStorage Methods
+| class | methods |
+| ---- | ---- |
+
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
