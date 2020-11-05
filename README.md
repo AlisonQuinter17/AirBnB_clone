@@ -41,8 +41,8 @@ $ python3 -m unittest discover tests
 ## What is inside
 | File | Description |
 | ---- | ---- |
-| README.md | description of the proyect and command interpreter |
-
+| README.md | Description of the proyect and command interpreter |
+| AUTHORS | List all individuals having contributed content to the repository. Docker's format reference |
 
 ## Environment
 * Language: Python3
