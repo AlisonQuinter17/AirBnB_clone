@@ -65,6 +65,7 @@ $ python3 -m unittest discover tests
 ## FileStorage Methods
 | class | methods |
 | ---- | ---- |
+| all() | returns a dictionary `__objects` |
 
 ## Environment
 * Language: Python3
