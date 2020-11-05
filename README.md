@@ -6,7 +6,7 @@ In this repository we develop the first step in the construction of our first co
 <img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/first_step_o.png" class="responsive"/>
 **This project is part of the Holberton School Full-Stack Software Engineer program.**
 
-## Usage
+## Execution
 - You can run the console mode:
 ### Interactive
 ```python
@@ -18,7 +18,10 @@ $ ./console.py
 $ echo "help" | ./console.py
 (hbnb)
 ```
+## Example
+<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
 
+## Usage
 | Command  |  Description  | Use |
 | ----- | ----- | ----- |
 | create |Create an instance (object) and print its id.| **(hbnb)** create `<class>` |
@@ -30,14 +33,6 @@ $ echo "help" | ./console.py
 | quit / EOF | Exit the program. | **(hbnb)** quit *or* **(hbnb)** EOF |
 | help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb)** help |
 
-## Example
-<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
-
-## Tests
-- The code of this project is tested with the **unittest** module, to run it type:
-```python
-$ python3 -m unittest discover tests
-```
 ## Content
 | Filename | Description |
 | ---- | ---- |
@@ -69,6 +64,12 @@ $ python3 -m unittest discover tests
 | new() | sets the argument given as a value in the dictionary |
 | save() | serializes from string to json and store it in file.json |
 | reload() | deserializes from json to string and store it in file.json using save |
+
+## Tests
+- The code of this project is tested with the **unittest** module, to run it type:
+```python
+$ python3 -m unittest discover tests
+```
 
 <img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/logos.png" class="responsive"/>
 
