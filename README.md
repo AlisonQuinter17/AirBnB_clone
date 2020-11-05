@@ -73,6 +73,7 @@ $ python3 -m unittest discover tests
 ![](https://innocreate.com/wp-content/uploads/2017/07/jsonlogo-550x550.png)
 ![](https://i.pinimg.com/originals/0f/60/19/0f6019e15f1d8ae07e7e8ea16d242676.png)
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png)
+![](https://miro.medium.com/max/719/1*WaaXnUvhvrswhBJSw4YTuQ.png)
 > {JSON} Storage Engine.
 > Python Programming Language.
 > GIT control version.
