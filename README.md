@@ -39,7 +39,9 @@ $ echo "help" | ./console.py
 $ python3 -m unittest discover tests
 ```
 ## What is inside
-| File  |  Description  |
+| File | Description |
+| ---- | ---- |
+| README.md | description of the proyect and command interpreter |
 
 
 ## Environment
