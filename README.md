@@ -74,7 +74,9 @@ $ python3 -m unittest discover tests
 ![](https://i.pinimg.com/originals/0f/60/19/0f6019e15f1d8ae07e7e8ea16d242676.png)
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png)
 > {JSON} Storage Engine.
-
+> Python Programming Language.
+> GIT control version.
+> Github Repository
 
 ## Environment
 * Language: Python3
