@@ -50,6 +50,7 @@ $ python3 -m unittest discover tests
 | file_storage.py | Serializes/deserializes into JSON/PYTHON format - contains FileStorage class and methods |
 | user.py | Inherits from BaseModel - contains class attributes like email, password, first_name and last_name |
 | state.py | Inherits from BaseModel - contains class attributes like name |
+| city.py | Inherits from BaseModel - contains class attributes like state_id and name |
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
