@@ -54,6 +54,11 @@ $ python3 -m unittest discover tests
 | amenity.py | Inherits from BaseModel - contains class attributes like state_id and name |
 | place.py | Inherits from BaseModel - contains class attributes like city_id, user_id, name, description, number_rooms, number_bathrooms, max_guest, price_by_night, latitude, longitude and amenity_ids |
 | review.py | Inherits from BaseModel - contains class attributes like place_id, user_id and text |
+
+## What is inside
+| class | methods |
+| ---- | ---- |
+| `__str__` | returns string format of the object, with class.name id and dict |
 ## Environment
 * Language: Python3
 * OS: Ubuntu 14.04 LTS
