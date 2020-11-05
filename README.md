@@ -70,7 +70,7 @@ $ python3 -m unittest discover tests
 | save() | serializes from string to json and store it in file.json |
 | reload() | deserializes from json to string and store it in file.json using save |
 
-![](https://innocreate.com/wp-content/uploads/2017/07/jsonlogo-550x550.png)
+![](https://innocreate.com/wp-content/uploads/2017/07/jsonlogo-550x550.png)(https://i.pinimg.com/originals/0f/60/19/0f6019e15f1d8ae07e7e8ea16d242676.png)
 
 > {JSON} Storage Engine.
 
