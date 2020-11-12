@@ -6,7 +6,7 @@ In this repository we develop the first step in the construction of our first co
 <img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/first_step_o.png" class="responsive"/>
 **This project is part of the Holberton School Full-Stack Software Engineer program.**
 
-## Usage
+## Execution
 - You can run the console mode:
 ### Interactive
 ```python
@@ -18,10 +18,8 @@ $ ./console.py
 $ echo "help" | ./console.py
 (hbnb)
 ```
-## Example
 
-<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
-
+## Usage
 | Command  |  Description  | Use |
 | ----- | ----- | ----- |
 | create |Create an instance (object) and print its id.| **(hbnb)** create `<class>` |
@@ -33,15 +31,12 @@ $ echo "help" | ./console.py
 | quit / EOF | Exit the program. | **(hbnb)** quit *or* **(hbnb)** EOF |
 | help | This action is provided by cmd by default, but should be kept up to date and documented. | **(hbnb)** help |
 
-## Tests
-- The code of this project is tested with the **unittest** module, to run it type:
-```python
-$ python3 -m unittest discover tests
-```
-## What is inside
-| File | Description |
+## Example
+<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/canva_video.gif" class="responsive"/>
+
+## Content
+| Filename | Description |
 | ---- | ---- |
-| README.md | Description of the proyect and command interpreter |
 | AUTHORS | List all individuals having contributed content to the repository. Docker's format reference |
 | LICENSE | MIT LICENSE AND COPYTIGHT NOTICE |
 | console.py | Contains the entry point of the command interpreter `./console.py`|
@@ -54,36 +49,30 @@ $ python3 -m unittest discover tests
 | amenity.py | Inherits from BaseModel - contains class attributes like state_id and name |
 | place.py | Inherits from BaseModel - contains class attributes like city_id, user_id, name, description, number_rooms, number_bathrooms, max_guest, price_by_night, latitude, longitude and amenity_ids |
 | review.py | Inherits from BaseModel - contains class attributes like place_id, user_id and text |
+| README.md | Description of the proyect and command interpreter |
 
 ## BaseModel Methods
-| class | methods |
+| Class | Methods |
 | ---- | ---- |
 | `__str__()` | returns string format of the object, with class.name id and dict |
 | save() | updates instance attribute updated_at and save string into file.json |
 | to_dict() | returns a dictionary with isoformat, class name and all keys/values |
 
 ## FileStorage Methods
-| class | methods |
+| Class | Methods |
 | ---- | ---- |
 | all() | returns a dictionary `__objects` |
 | new() | sets the argument given as a value in the dictionary |
 | save() | serializes from string to json and store it in file.json |
 | reload() | deserializes from json to string and store it in file.json using save |
 
-![](https://innocreate.com/wp-content/uploads/2017/07/jsonlogo-550x550.png)
-![](https://i.pinimg.com/originals/0f/60/19/0f6019e15f1d8ae07e7e8ea16d242676.png)
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png)
-![](https://miro.medium.com/max/719/1*WaaXnUvhvrswhBJSw4YTuQ.png)
+## Tests
+- The code of this project is tested with the **unittest** module, to run it type:
+```python
+$ python3 -m unittest discover tests
+```
 
-
-> {JSON} Storage Engine.
-
-> Python Programming Language.
-
-> GIT control version.
-
-> Github Repository
-
+<img src="https://github.com/AlisonQuinter17/AirBnB_clone/blob/main/multimedia/logos.png" class="responsive"/>
 
 ## Environment
 * Language: Python3
